@@ -1,37 +1,42 @@
-# Welcome to your Lovable project
+# Pip's Midnight Observatory
 
-This project was built with [Lovable](https://lovable.dev).
+An interactive, story-driven portfolio experience starring Pip, a Junior Dream Engineer. Built for the haX.baby Track 1 with React, TypeScript, TanStack Start, Vite, and Tailwind CSS.
 
-## Build with Lovable
+## Run locally
 
-Open your project in the [Lovable editor](https://lovable.dev) and keep building.
+### Requirements
+- Node.js 20 or newer
+- npm
 
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: connect the project to GitHub and every change made in Lovable is committed straight to your repository.
-- **Full ownership**: this code is yours. Push to your repository and your changes sync back into Lovable, ready for your next prompt.
-
-## Development
-
-Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
-
-```sh
-git clone <this-repository-url>
-cd <repository-name>
-npm i
+### Setup
+```bash
+git clone https://github.com/thepavann/pip-dreams.git
+cd pip-dreams
+npm install
 npm run dev
 ```
 
-## Built with
+Open the local URL printed by Vite.
 
-- TanStack Start
-- TypeScript
-- React
-- Tailwind CSS
+## Scripts
 
-## Pip's Midnight Observatory
+- `npm run dev` — start the local development server
+- `npm run build` — create a production build
+- `npm run preview` — preview the production build
+- `npm run lint` — run ESLint
+- `npm test` — run the test suite
 
-Single-page character portfolio for Pip (haX.baby Track 1). No backend.
+## Project notes
 
-- **Dream visitors counter** is a *local demonstration only*: it is stored in your browser's localStorage and increments once per new browser session. It is not a global or real analytics count.
-- All sound is synthesized with the Web Audio API, starts muted and never autoplays.
-- Official Pip artwork © haX.baby, served from the project asset CDN.
+- The four original Pip PNG assets are stored in `src/assets/`; the app does not depend on Lovable-hosted image URLs.
+- Sound is synthesized with the Web Audio API, starts muted, and never autoplays.
+- The dream visitor counter is a local demonstration stored in browser localStorage. It is not a global analytics count.
+- There is no required Lovable account, editor, runtime, or hosted backend.
+
+## Deployment
+
+The project is a standard Node.js application and can be developed and deployed independently. Configure your host to install dependencies with `npm install` and run the production build with `npm run build`. Choose a deployment adapter/runtime compatible with TanStack Start's server output.
+
+## Artwork credits
+
+Pip artwork originates from the haX.baby Track 1 creator asset pack. See [IMAGE_ASSETS.md](./IMAGE_ASSETS.md) for the local asset list.
