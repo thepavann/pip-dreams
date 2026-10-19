@@ -1,13 +1,8 @@
-<!-- LOVABLE:BEGIN -->
-> [!IMPORTANT]
-> This project is connected to [Lovable](https://lovable.dev). Avoid rewriting
-> published git history — force pushing, or rebasing/amending/squashing commits
-> that are already pushed — as it rewrites history on Lovable's side and the
-> user will likely lose their project history.
->
-> Commits you push to the connected branch sync back to Lovable and show up in
-> the editor, so keep the branch in a working state.
-<!-- LOVABLE:END -->
+# Project guidance
 
-- Theme, sound, chaos and status live in one React context (`src/lib/site-state.tsx`); all audio goes through the singleton in `src/lib/audio.ts` so the global mute covers every sound.
-- Pure rules (secret sequence, local visitor counter) live in `src/lib/pip-logic.ts` with tests in `src/test/` — keep logic there so it stays testable.
+- This repository is a standalone React + TypeScript + TanStack Start application built with Vite and Tailwind CSS.
+- Keep theme, sound, chaos, and status state in `src/lib/site-state.tsx`; route all audio through `src/lib/audio.ts` so the global mute control covers every sound.
+- Keep pure rules (secret sequence, local visitor counter) in `src/lib/pip-logic.ts` and test them in `src/test/`.
+- Keep Pip artwork local in `src/assets/`; do not introduce dependencies on editor-hosted asset URLs.
+- Do not add platform-specific editor SDKs, telemetry hooks, or generated editor configuration.
+- Before merging build-system changes, run `npm install`, `npm run build`, `npm test`, and `npm run lint`.
